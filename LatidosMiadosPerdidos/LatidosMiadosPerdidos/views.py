@@ -12,7 +12,7 @@ def home():
     """Renders the home page."""
     return render_template(
         'index.html',
-        title='Home Page',
+        title='Home',
         year=datetime.now().year,
     )
 
@@ -21,7 +21,7 @@ def contact():
     """Renders the contact page."""
     return render_template(
         'contact.html',
-        title='Contact',
+        title='Contato',
         year=datetime.now().year,
         message='Your contact page.'
     )
@@ -31,7 +31,7 @@ def about():
     """Renders the about page."""
     return render_template(
         'about.html',
-        title='About',
+        title='Sobre',
         year=datetime.now().year,
         message='Your application description page.'
     )
