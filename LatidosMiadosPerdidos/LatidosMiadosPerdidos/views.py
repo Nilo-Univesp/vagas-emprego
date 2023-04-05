@@ -28,7 +28,7 @@ def contact():
 
 @app.route('/about')
 def about():
-    """Renders the about page teste."""
+    """Renders the about page teste2."""
     return render_template(
         'about.html',
         title='Sobre',
