@@ -13,7 +13,7 @@ def home():
     return render_template(
         'index.html',
         title='Home',
-        year=datetime.now().year,
+        year=datetime.now().year
     )
 
 @app.route('/contact')

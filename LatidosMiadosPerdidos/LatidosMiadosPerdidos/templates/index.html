@@ -4,29 +4,45 @@
 
 <div class="jumbotron">
     <h1>Latidos e Miados Perdidos</h1>
-    <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <p class="lead">Nos ajudamos secretarias municipais e ONGs da causa animal nas cidades de Jau e Dois Corregos a encontrar animais perdidos e reunir familias.</p>
+    <img src="{{ url_for('static', filename='cao-e-gato.png') }}" alt="Imagem de um cao e um gato" class="img-responsive" style="max-width: 300px;">
+    <p><a href="#" class="btn btn-primary btn-large">Reportar um animal perdido/encontrado</a></p>
 </div>
 
 <div class="row">
+    <div class="col-md-8">
+        <h2>Animais perdidos/encontrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Raca</th>
+                    <th>Descricao</th>
+                    <th>Contato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fido</td>
+                    <td>Labrador Retriever</td>
+                    <td>Perdido na rua Sao Paulo</td>
+                    <td>jane@example.com</td>
+                </tr>
+                <tr>
+                    <td>Max</td>
+                    <td>German Shepherd</td>
+                    <td>Encontrado no parque do jardim das flores</td>
+                    <td>john@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Como funciona</h2>
         <p>
-            Flask gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Quando um animal e perdido ou encontrado, e importante agir rapidamente para aumentar as chances de reunir a familia. Com o nosso website, voce pode reportar um animal perdido/encontrado e acessar uma lista de animais que ja foram registrados.
         </p>
-        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="#">Saiba mais &raquo;</a></p>
     </div>
 </div>
 

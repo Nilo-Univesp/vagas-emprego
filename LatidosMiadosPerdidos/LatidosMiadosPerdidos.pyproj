@@ -41,6 +41,7 @@
     <Folder Include="LatidosMiadosPerdidos\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LatidosMiadosPerdidos\static\cao-e-gato.png" />
     <Content Include="requirements.txt" />
     <Content Include="LatidosMiadosPerdidos\static\content\bootstrap.css" />
     <Content Include="LatidosMiadosPerdidos\static\content\bootstrap.min.css" />
