@@ -2,6 +2,35 @@
 
 {% block content %}
 
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Cadastrar um novo registo de Pet perdido ou encontrado</h2>
+            <form method="POST" action="/register-pet">
+                <div class="form-group">
+                    <label for="pet-name">Nome</label>
+                    <input type="text" class="form-control" id="pet-name" name="pet-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-breed">Raca</label>
+                    <input type="text" class="form-control" id="pet-breed" name="pet-breed" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-description">Descricao</label>
+                    <textarea class="form-control" id="pet-description" name="pet-description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contato</label>
+                    <input type="text" class="form-control" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-image">Foto do Pet</label>
+                    <input type="file" class="form-control-file" id="pet-image" name="pet-image">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
