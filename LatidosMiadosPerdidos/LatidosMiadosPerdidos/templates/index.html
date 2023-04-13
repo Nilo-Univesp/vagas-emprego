@@ -18,22 +18,20 @@
                     <th>Nome</th>
                     <th>Raca</th>
                     <th>Descricao</th>
+                    <th>Foto</th>
                     <th>Contato</th>
                 </tr>
             </thead>
             <tbody>
+                {% for pet in pets %}
                 <tr>
-                    <td>Fido</td>
-                    <td>Labrador Retriever</td>
-                    <td>Perdido na rua Sao Paulo</td>
-                    <td>jane@example.com</td>
+                    <td>{{ pet.name }}</td>
+                    <td>{{ pet.breed }}</td>
+                    <td>{{ pet.description }}</td>
+                    <td><a href="#pet{{ pet.id }}" data-toggle="modal"><img src="{{ url_for('static', filename=pet.photo) }}" alt="Foto do {{ pet.name }}" style="max-width: 100px; max-height: 100px;"></a></td>
+                    <td>{{ pet.contact }}</td>
                 </tr>
-                <tr>
-                    <td>Max</td>
-                    <td>German Shepherd</td>
-                    <td>Encontrado no parque do jardim das flores</td>
-                    <td>john@example.com</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
@@ -45,5 +43,25 @@
         <p><a class="btn btn-default" href="{{ url_for('about') }}">Saiba mais &raquo;</a></p>
     </div>
 </div>
+
+
+{% for pet in pets %}
+<div class="modal fade" id="pet{{ pet.id }}" tabindex="-1" role="dialog" aria-labelledby="pet{{ pet.id }}-label">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pet{{ pet.id }}-label">{{ pet.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{ url_for('static', filename=pet.photo) }}" alt="Foto do {{ pet.name }}" style="max-width: 450px; max-height: 500px;">
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
 
 {% endblock %}

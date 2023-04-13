@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LatidosMiadosPerdidos\static\cao-e-gato.png" />
+    <Content Include="LatidosMiadosPerdidos\static\fido.jpg" />
+    <Content Include="LatidosMiadosPerdidos\static\max.jpg" />
     <Content Include="LatidosMiadosPerdidos\templates\formpet.html" />
     <Content Include="requirements.txt" />
     <Content Include="LatidosMiadosPerdidos\static\content\bootstrap.css" />

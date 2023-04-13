@@ -9,11 +9,19 @@ from LatidosMiadosPerdidos import app
 @app.route('/')
 @app.route('/home')
 def home():
+
+    # Teste data
+    pets = [
+        {'id': '1','name': 'Fido', 'breed': 'Labrador Retriever', 'description': 'Perdido na rua Sao Paulo', 'photo': 'fido.jpg', 'contact': 'jane@example.com'},
+        {'id': '2','name': 'Max', 'breed': 'German Shepherd', 'description': 'Encontrado no parque do jardim das flores', 'photo': 'max.jpg', 'contact': '(14) 98172-3820'}
+    ]
+
     """Renders the home page."""
     return render_template(
         'index.html',
         title='Home',
-        year=datetime.now().year
+        year=datetime.now().year,
+        pets = pets
     )
 
 @app.route('/contact')
