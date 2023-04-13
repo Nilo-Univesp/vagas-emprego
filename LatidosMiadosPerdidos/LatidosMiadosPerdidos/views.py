@@ -28,10 +28,19 @@ def contact():
 
 @app.route('/about')
 def about():
-    """Renders the about page teste2."""
+    """Renders the about page."""
     return render_template(
         'about.html',
-        title='Sobre',
+        title='Saiba mais',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='Latidos e Miados perdidos - um projeto de alunos da UNIVESP.'
+    )
+
+@app.route('/formpet')
+def formpet():
+    """Renders the formpet page."""
+    return render_template(
+        'formpet.html',
+        title='Cadastre um Pet',
+        year=datetime.now().year
     )
