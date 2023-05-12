@@ -31,12 +31,32 @@ class PetDatabase:
             
     def add_pet(self, pet_data):
         try:
-            sql = "INSERT INTO pets (name, breed, description, photo, contact) VALUES (?, ?, ?, ?, ?)"
-            self.cursor.execute(sql, (pet_data['name'], pet_data['breed'], pet_data['description'], pet_data['photo'], pet_data['contact']))
-            self.connection.commit()
-            print("Pet adicionado com sucesso.")
+            # Check if all form data is present before adding to the database
+            if 'name' in pet_data and 'breed' in pet_data and 'description' in pet_data and 'contact' in pet_data:
+                sql = "INSERT INTO pets (name, breed, description, photo, contact) VALUES (?, ?, ?, ?, ?)"
+                if 'photo' in pet_data:
+                    self.cursor.execute(sql, (pet_data['name'], pet_data['breed'], pet_data['description'], pet_data['photo'], pet_data['contact']))
+                else:
+                    self.cursor.execute(sql, (pet_data['name'], pet_data['breed'], pet_data['description'], None, pet_data['contact']))
+                self.connection.commit()
+                print("Pet adicionado com sucesso.")
+                return True
+            else:
+                print("Dados incompletos do pet.")
+                return False
         except sqlite3.Error as e:
             print("Erro ao adicionar pet: ", e)
+            return False
+
+    def delete_pet(self, pet_id):
+        try:
+            self.cursor.execute("DELETE FROM pets WHERE id=?", (pet_id,))
+            self.connection.commit()
+            print(f"Pet with id {pet_id} deleted successfully.")
+            return True
+        except sqlite3.Error as e:
+            print("Erro ao deletar pet: ", e)
+            return False
 
     def disconnect(self):
         self.connection.close()
