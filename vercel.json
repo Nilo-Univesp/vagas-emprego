@@ -1,0 +1,20 @@
+﻿{
+  "version": "2",
+  "builds": [
+    {
+      "src": "runserver.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/runserver.py"
+    }
+  ],
+  "env": {
+    "FLASK_APP": "LatidosMiadosPerdidos/__init__.py",
+    "FLASK_ENV": "production"
+  }
+}
