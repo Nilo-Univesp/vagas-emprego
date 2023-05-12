@@ -35,12 +35,11 @@ class TestViews(unittest.TestCase):
 
     def test_register_pet_view(self):
         pet_data = {
-            'name': 'Test Pet',
-            'breed': 'Test Breed',
-            'description': 'Test Description',
-            'contact': 'Test Contact',
-            'photo': 'blank.png'
+            'pet-name': 'Test Pet',
+            'pet-breed': 'Test Breed',
+            'pet-description': 'Test Description',
+            'contact': 'Test Contact'
         }
         response = self.client.post('/register-pet', data=pet_data)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'"success": true', response.data)
+        self.assertIn(b'"success":true', response.data)
