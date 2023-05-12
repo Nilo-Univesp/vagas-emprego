@@ -61,3 +61,7 @@ class PetDatabase:
     def disconnect(self):
         self.connection.close()
         print("Conexao com banco de dados finalizada com sucesso.")
+
+    def delete_pet_table(self):
+        self.cursor.execute("DROP TABLE IF EXISTS pets")
+        self.connection.commit()

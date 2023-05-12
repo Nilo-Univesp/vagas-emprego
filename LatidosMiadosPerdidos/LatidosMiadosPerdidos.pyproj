@@ -18,6 +18,7 @@
     <Name>LatidosMiadosPerdidos</Name>
     <RootNamespace>LatidosMiadosPerdidos</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,12 +32,19 @@
     <Compile Include="LatidosMiadosPerdidos\pet_database.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LatidosMiadosPerdidos\test\test_database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LatidosMiadosPerdidos\test\test_views.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="LatidosMiadosPerdidos\__init__.py" />
     <Compile Include="LatidosMiadosPerdidos\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LatidosMiadosPerdidos\" />
+    <Folder Include="LatidosMiadosPerdidos\test\" />
     <Folder Include="LatidosMiadosPerdidos\static\" />
     <Folder Include="LatidosMiadosPerdidos\static\content\" />
     <Folder Include="LatidosMiadosPerdidos\static\fonts\" />
