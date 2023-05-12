@@ -10,17 +10,20 @@ from werkzeug.utils import secure_filename
 from LatidosMiadosPerdidos import app
 from LatidosMiadosPerdidos.pet_database import PetDatabase
 
+# Set the path to the database file in the temporary directory
+db_path = os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')
+
 @app.route('/')
 @app.route('/home')
 def home():
 
-    pet_db = PetDatabase('pets.db')
+    pet_db = PetDatabase(db_path)
     pet_db.connect()
     pet_db.create_table()
     pet_db.disconnect()
 
     # connect to the database
-    conn = sqlite3.connect('pets.db')
+    conn = sqlite3.connect(db_path)
 
     # create a cursor
     c = conn.cursor()
@@ -98,7 +101,7 @@ def register_pet():
     else:
         pet_data['photo'] = 'blank.png'
 
-    pet_db = PetDatabase('pets.db')
+    pet_db = PetDatabase(db_path)
     pet_db.connect()
     pet_db.add_pet(pet_data)
     pet_db.disconnect()
