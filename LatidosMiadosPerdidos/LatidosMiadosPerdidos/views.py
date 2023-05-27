@@ -11,7 +11,7 @@ from LatidosMiadosPerdidos import app
 from LatidosMiadosPerdidos.pet_database import PetDatabase
 
 # Set the path to the database file in the temporary directory
-db_path = os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')
+db_path = 'pets.db' #os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')
 
 @app.route('/')
 @app.route('/home')
