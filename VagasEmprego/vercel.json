@@ -11,7 +11,7 @@
     { "src": "/(.*)", "dest": "/runserver.py" }
   ],
   "env": {
-    "FLASK_APP": "LatidosMiadosPerdidos/__init__.py",
+    "FLASK_APP": "VagasEmprego/__init__.py",
     "FLASK_ENV": "production"
   }
 }

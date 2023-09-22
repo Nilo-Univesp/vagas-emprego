@@ -1,6 +1,6 @@
 import unittest
 import os
-from LatidosMiadosPerdidos.pet_database import PetDatabase
+from VagasEmprego.pet_database import PetDatabase
 
 class TestPetDatabase(unittest.TestCase):
     def setUp(self):

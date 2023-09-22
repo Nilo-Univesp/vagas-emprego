@@ -7,8 +7,8 @@ import os
 from datetime import datetime
 from flask import render_template, request, jsonify
 from werkzeug.utils import secure_filename
-from LatidosMiadosPerdidos import app
-from LatidosMiadosPerdidos.pet_database import PetDatabase
+from VagasEmprego import app
+from VagasEmprego.pet_database import PetDatabase
 
 # Set the path to the database file in the temporary directory
 db_path = 'pets.db' #os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')

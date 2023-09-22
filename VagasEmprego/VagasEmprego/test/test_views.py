@@ -1,6 +1,6 @@
 import unittest
-from LatidosMiadosPerdidos import app
-from LatidosMiadosPerdidos.pet_database import PetDatabase
+from VagasEmprego import app
+from VagasEmprego.pet_database import PetDatabase
 
 class TestViews(unittest.TestCase):
     def setUp(self):

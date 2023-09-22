@@ -5,7 +5,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>edef03cc-cf3c-4441-9c80-8030e79355a3</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <StartupFile>runserver.py</StartupFile>
     <SearchPath>
@@ -15,8 +16,8 @@
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
-    <Name>LatidosMiadosPerdidos</Name>
-    <RootNamespace>LatidosMiadosPerdidos</RootNamespace>
+    <Name>VagasEmprego</Name>
+    <RootNamespace>VagasEmprego</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
@@ -29,62 +30,63 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LatidosMiadosPerdidos\pet_database.py">
+    <Compile Include="VagasEmprego\pet_database.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LatidosMiadosPerdidos\test\test_database.py">
+    <Compile Include="VagasEmprego\test\test_database.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LatidosMiadosPerdidos\test\test_views.py">
+    <Compile Include="VagasEmprego\test\test_views.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
-    <Compile Include="LatidosMiadosPerdidos\__init__.py" />
-    <Compile Include="LatidosMiadosPerdidos\views.py" />
+    <Compile Include="VagasEmprego\__init__.py" />
+    <Compile Include="VagasEmprego\views.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LatidosMiadosPerdidos\" />
-    <Folder Include="LatidosMiadosPerdidos\test\" />
-    <Folder Include="LatidosMiadosPerdidos\static\" />
-    <Folder Include="LatidosMiadosPerdidos\static\content\" />
-    <Folder Include="LatidosMiadosPerdidos\static\fonts\" />
-    <Folder Include="LatidosMiadosPerdidos\static\scripts\" />
-    <Folder Include="LatidosMiadosPerdidos\templates\" />
+    <Folder Include="VagasEmprego\" />
+    <Folder Include="VagasEmprego\" />
+    <Folder Include="VagasEmprego\test\" />
+    <Folder Include="VagasEmprego\static\" />
+    <Folder Include="VagasEmprego\static\content\" />
+    <Folder Include="VagasEmprego\static\fonts\" />
+    <Folder Include="VagasEmprego\static\scripts\" />
+    <Folder Include="VagasEmprego\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LatidosMiadosPerdidos\static\blank.png" />
-    <Content Include="LatidosMiadosPerdidos\static\cao-e-gato.png" />
-    <Content Include="LatidosMiadosPerdidos\static\fido.jpg" />
-    <Content Include="LatidosMiadosPerdidos\static\latidos-miados.png" />
-    <Content Include="LatidosMiadosPerdidos\static\max.jpg" />
-    <Content Include="LatidosMiadosPerdidos\templates\formpet.html" />
+    <Content Include="VagasEmprego\static\blank.png" />
+    <Content Include="VagasEmprego\static\cao-e-gato.png" />
+    <Content Include="VagasEmprego\static\fido.jpg" />
+    <Content Include="VagasEmprego\static\latidos-miados.png" />
+    <Content Include="VagasEmprego\static\max.jpg" />
+    <Content Include="VagasEmprego\templates\formpet.html" />
     <Content Include="requirements.txt" />
-    <Content Include="LatidosMiadosPerdidos\static\content\bootstrap.css" />
-    <Content Include="LatidosMiadosPerdidos\static\content\bootstrap.min.css" />
-    <Content Include="LatidosMiadosPerdidos\static\content\site.css" />
-    <Content Include="LatidosMiadosPerdidos\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="LatidosMiadosPerdidos\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="LatidosMiadosPerdidos\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="LatidosMiadosPerdidos\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\bootstrap.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\bootstrap.min.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery-1.10.2.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery.validate.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery.validate.min.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\respond.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\respond.min.js" />
-    <Content Include="LatidosMiadosPerdidos\static\scripts\_references.js" />
-    <Content Include="LatidosMiadosPerdidos\templates\about.html" />
-    <Content Include="LatidosMiadosPerdidos\templates\contact.html" />
-    <Content Include="LatidosMiadosPerdidos\templates\index.html" />
-    <Content Include="LatidosMiadosPerdidos\templates\layout.html" />
+    <Content Include="VagasEmprego\static\content\bootstrap.css" />
+    <Content Include="VagasEmprego\static\content\bootstrap.min.css" />
+    <Content Include="VagasEmprego\static\content\site.css" />
+    <Content Include="VagasEmprego\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="VagasEmprego\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="VagasEmprego\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="VagasEmprego\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="VagasEmprego\static\scripts\bootstrap.js" />
+    <Content Include="VagasEmprego\static\scripts\bootstrap.min.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery-1.10.2.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="VagasEmprego\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery.validate.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery.validate.min.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="VagasEmprego\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="VagasEmprego\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="VagasEmprego\static\scripts\respond.js" />
+    <Content Include="VagasEmprego\static\scripts\respond.min.js" />
+    <Content Include="VagasEmprego\static\scripts\_references.js" />
+    <Content Include="VagasEmprego\templates\about.html" />
+    <Content Include="VagasEmprego\templates\contact.html" />
+    <Content Include="VagasEmprego\templates\index.html" />
+    <Content Include="VagasEmprego\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">

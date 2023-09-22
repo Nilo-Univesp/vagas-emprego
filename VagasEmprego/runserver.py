@@ -1,9 +1,9 @@
 """
-This script runs the LatidosMiadosPerdidos application using a development server.
+This script runs the VagasEmprego application using a development server.
 """
 
 from os import environ
-from LatidosMiadosPerdidos import app
+from VagasEmprego import app
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')
