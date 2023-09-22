@@ -65,7 +65,7 @@ def about():
         'about.html',
         title='Saiba mais',
         year=datetime.now().year,
-        message='Latidos e Miados perdidos - um projeto de alunos da UNIVESP.'
+        message='Procura-se Emprego - um projeto de alunos da UNIVESP.'
     )
 
 @app.route('/formpet')
@@ -77,7 +77,7 @@ def formpet():
     """Renders the formpet page."""
     return render_template(
         'formpet.html',
-        title='Cadastre um Pet',
+        title='Cadastre uma vaga',
         year=datetime.now().year
     )
 

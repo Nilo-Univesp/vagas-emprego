@@ -31,7 +31,7 @@ class TestViews(unittest.TestCase):
     def test_formpet_view(self):
         response = self.client.get('/formpet')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Cadastre um Pet', response.data)
+        self.assertIn(b'Cadastre uma vaga', response.data)
 
     def test_register_pet_view(self):
         pet_data = {
