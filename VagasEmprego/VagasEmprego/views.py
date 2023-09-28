@@ -9,15 +9,16 @@ from flask import render_template, request, jsonify
 from werkzeug.utils import secure_filename
 from VagasEmprego import app
 from VagasEmprego.pet_database import PetDatabase
+from VagasEmprego.vagas_database import VagasDatabase
 
 # Set the path to the database file in the temporary directory
-db_path = 'pets.db' #os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')
+db_path = 'vagas.db' #os.path.join(app.config['UPLOAD_FOLDER'], 'pets.db')
 
 @app.route('/')
 @app.route('/home')
 def home():
 
-    pet_db = PetDatabase(db_path)
+    pet_db = VagasDatabase(db_path)
     pet_db.connect()
     pet_db.create_table()
     pet_db.disconnect()
@@ -29,7 +30,7 @@ def home():
     c = conn.cursor()
 
     # select all data from the 'pets' table
-    c.execute("SELECT * FROM pets")
+    c.execute("SELECT * FROM vagas")
 
     # get the column names
     columns = [description[0] for description in c.description]
@@ -84,24 +85,24 @@ def formpet():
 @app.route('/register-pet', methods=['POST'])
 def register_pet():
     pet_data = {
-        'name': request.form['pet-name'],
-        'breed': request.form['pet-breed'],
+        'vaga': request.form['pet-name'],
+        'empresa': request.form['pet-breed'],
         'description': request.form['pet-description'],
         'contact': request.form['contact']
     }
 
-    if 'pet-image' in request.files:
-        image_file = request.files['pet-image']
-        if image_file.filename != '':
-            filename = secure_filename(image_file.filename)
-            image_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            pet_data['photo'] = filename
-        else:
-            pet_data['photo'] = 'blank.png'
-    else:
-        pet_data['photo'] = 'blank.png'
+    #if 'pet-image' in request.files:
+    #    image_file = request.files['pet-image']
+    #    if image_file.filename != '':
+    #        filename = secure_filename(image_file.filename)
+    #        image_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    #        pet_data['photo'] = filename
+    #    else:
+    #        pet_data['photo'] = 'blank.png'
+    #else:
+    #    pet_data['photo'] = 'blank.png'
 
-    pet_db = PetDatabase(db_path)
+    pet_db = VagasDatabase(db_path)
     pet_db.connect()
     pet_db.add_pet(pet_data)
     pet_db.disconnect()

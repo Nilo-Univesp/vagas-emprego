@@ -40,6 +40,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
+    <Compile Include="VagasEmprego\vagas_database.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="VagasEmprego\__init__.py" />
     <Compile Include="VagasEmprego\views.py" />
   </ItemGroup>
@@ -59,6 +62,7 @@
     <Content Include="VagasEmprego\static\fido.jpg" />
     <Content Include="VagasEmprego\static\latidos-miados.png" />
     <Content Include="VagasEmprego\static\max.jpg" />
+    <Content Include="VagasEmprego\static\rc1-vagas.jpeg" />
     <Content Include="VagasEmprego\templates\formpet.html" />
     <Content Include="requirements.txt" />
     <Content Include="VagasEmprego\static\content\bootstrap.css" />
